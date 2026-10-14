@@ -1,0 +1,158 @@
+info: Microsoft.EntityFrameworkCore.Migrations[20411]
+      Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (63ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (49ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2026-10-08 11:33:30.51412+00:00');
+      SELECT changes();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+info: Microsoft.EntityFrameworkCore.Migrations[20405]
+      No migrations were applied. The database is already up to date.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (62ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      DELETE FROM "__EFMigrationsLock";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT EXISTS (
+          SELECT 1
+          FROM "Users" AS "u")
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (106ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 20), @p2='?' (Size = 16), @p3='?' (DbType = Boolean), @p4='?' (Size = 69), @p5='?' (Size = 13), @p6='?' (Size = 5)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Users" ("CreatedAt", "Email", "FullName", "IsActive", "PasswordHash", "Phone", "Role")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 12), @p2='?' (Size = 8), @p3='?' (DbType = Boolean), @p4='?' (Size = 69), @p5='?' (Size = 13), @p6='?' (Size = 6)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Users" ("CreatedAt", "Email", "FullName", "IsActive", "PasswordHash", "Phone", "Role")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 14), @p2='?' (Size = 10), @p3='?' (DbType = Boolean), @p4='?' (Size = 69), @p5='?' (Size = 13), @p6='?' (Size = 6)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Users" ("CreatedAt", "Email", "FullName", "IsActive", "PasswordHash", "Phone", "Role")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 14), @p2='?' (Size = 11), @p3='?' (DbType = Boolean), @p4='?' (Size = 69), @p5='?' (Size = 13), @p6='?' (Size = 6)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Users" ("CreatedAt", "Email", "FullName", "IsActive", "PasswordHash", "Phone", "Role")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 14), @p2='?' (Size = 13), @p3='?' (DbType = Boolean), @p4='?' (Size = 69), @p5='?' (Size = 13), @p6='?' (Size = 8)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Users" ("CreatedAt", "Email", "FullName", "IsActive", "PasswordHash", "Phone", "Role")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (17ms) [Parameters=[@p0='?' (Size = 16), @p1='?' (DbType = DateTime), @p2='?' (Size = 10), @p3='?' (Size = 8), @p4='?' (Size = 3), @p5='?' (Size = 7), @p6='?' (DbType = DateTime), @p7='?' (Size = 53), @p8='?' (Size = 32), @p9='?', @p10='?' (DbType = DateTime), @p11='?' (DbType = DateTime), @p12='?' (Size = 11), @p13='?' (DbType = Int32), @p14='?', @p15='?' (Size = 11), @p16='?', @p17='?' (Size = 15), @p18='?' (Size = 13), @p19='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Shops" ("Address", "ApprovedAt", "BankAccountNumber", "BankAccountTitle", "BankName", "City", "CreatedAt", "Description", "IssuingAuthority", "LicenseDocumentPath", "LicenseExpiryDate", "LicenseIssueDate", "LicenseNumber", "OwnerUserId", "RejectionReason", "ShopCategory", "ShopImagePath", "ShopName", "ShopPhone", "Status")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 9), @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?', @p5='?' (Size = 6), @p6='?' (DbType = DateTime), @p7='?' (Size = 44), @p8='?' (Size = 28), @p9='?', @p10='?' (DbType = DateTime), @p11='?' (DbType = DateTime), @p12='?' (Size = 11), @p13='?' (DbType = Int32), @p14='?', @p15='?' (Size = 7), @p16='?', @p17='?' (Size = 18), @p18='?' (Size = 13), @p19='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Shops" ("Address", "ApprovedAt", "BankAccountNumber", "BankAccountTitle", "BankName", "City", "CreatedAt", "Description", "IssuingAuthority", "LicenseDocumentPath", "LicenseExpiryDate", "LicenseIssueDate", "LicenseNumber", "OwnerUserId", "RejectionReason", "ShopCategory", "ShopImagePath", "ShopName", "ShopPhone", "Status")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 6), @p1='?' (DbType = DateTime), @p2='?' (Size = 10), @p3='?' (Size = 11), @p4='?' (Size = 3), @p5='?' (Size = 10), @p6='?' (DbType = DateTime), @p7='?' (Size = 34), @p8='?' (Size = 27), @p9='?', @p10='?' (DbType = DateTime), @p11='?' (DbType = DateTime), @p12='?' (Size = 11), @p13='?' (DbType = Int32), @p14='?', @p15='?' (Size = 11), @p16='?', @p17='?' (Size = 13), @p18='?' (Size = 13), @p19='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Shops" ("Address", "ApprovedAt", "BankAccountNumber", "BankAccountTitle", "BankName", "City", "CreatedAt", "Description", "IssuingAuthority", "LicenseDocumentPath", "LicenseExpiryDate", "LicenseIssueDate", "LicenseNumber", "OwnerUserId", "RejectionReason", "ShopCategory", "ShopImagePath", "ShopName", "ShopPhone", "Status")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime), @p6='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "SellerApplications" ("Notes", "ReviewedAt", "ReviewedByAdminId", "ShopId", "Status", "SubmittedAt", "UserId")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 24), @p1='?', @p2='?' (Size = 11), @p3='?' (DbType = Int32), @p4='?' (Size = 11)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Categories" ("Description", "ImagePath", "Name", "ParentId", "Slug")
+      VALUES (@p0, @p1, @p2, @p3, @p4)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (415ms) [Parameters=[@p0='?' (Size = 28), @p1='?', @p2='?' (Size = 7), @p3='?' (DbType = Int32), @p4='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Categories" ("Description", "ImagePath", "Name", "ParentId", "Slug")
+      VALUES (@p0, @p1, @p2, @p3, @p4)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 22), @p1='?', @p2='?' (Size = 7), @p3='?' (DbType = Int32), @p4='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Categories" ("Description", "ImagePath", "Name", "ParentId", "Slug")
+      VALUES (@p0, @p1, @p2, @p3, @p4)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 20), @p1='?', @p2='?' (Size = 14), @p3='?' (DbType = Int32), @p4='?' (Size = 12)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Categories" ("Description", "ImagePath", "Name", "ParentId", "Slug")
+      VALUES (@p0, @p1, @p2, @p3, @p4)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 5), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (Size = 34), @p5='?' (DbType = Decimal), @p6='?' (DbType = Boolean), @p7='?' (Size = 13), @p8='?' (DbType = Decimal), @p9='?' (Size = 9), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Products" ("ApprovalStatus", "Brand", "CategoryId", "CreatedAt", "Description", "Discount", "IsActive", "Name", "Price", "SKU", "ShopId", "StockQuantity", "Weight")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 7), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (Size = 30), @p5='?' (DbType = Decimal), @p6='?' (DbType = Boolean), @p7='?' (Size = 18), @p8='?' (DbType = Decimal), @p9='?' (Size = 8), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Products" ("ApprovalStatus", "Brand", "CategoryId", "CreatedAt", "Description", "Discount", "IsActive", "Name", "Price", "SKU", "ShopId", "StockQuantity", "Weight")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 5), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (Size = 34), @p5='?' (DbType = Decimal), @p6='?' (DbType = Boolean), @p7='?' (Size = 14), @p8='?' (DbType = Decimal), @p9='?' (Size = 10), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Products" ("ApprovalStatus", "Brand", "CategoryId", "CreatedAt", "Description", "Discount", "IsActive", "Name", "Price", "SKU", "ShopId", "StockQuantity", "Weight")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (Size = 36), @p5='?' (DbType = Decimal), @p6='?' (DbType = Boolean), @p7='?' (Size = 12), @p8='?' (DbType = Decimal), @p9='?' (Size = 8), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Products" ("ApprovalStatus", "Brand", "CategoryId", "CreatedAt", "Description", "Discount", "IsActive", "Name", "Price", "SKU", "ShopId", "StockQuantity", "Weight")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 6), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (Size = 28), @p5='?' (DbType = Decimal), @p6='?' (DbType = Boolean), @p7='?' (Size = 17), @p8='?' (DbType = Decimal), @p9='?' (Size = 7), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Products" ("ApprovalStatus", "Brand", "CategoryId", "CreatedAt", "Description", "Discount", "IsActive", "Name", "Price", "SKU", "ShopId", "StockQuantity", "Weight")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 5), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (Size = 33), @p5='?' (DbType = Decimal), @p6='?' (DbType = Boolean), @p7='?' (Size = 13), @p8='?' (DbType = Decimal), @p9='?' (Size = 9), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = Double)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Products" ("ApprovalStatus", "Brand", "CategoryId", "CreatedAt", "Description", "Discount", "IsActive", "Name", "Price", "SKU", "ShopId", "StockQuantity", "Weight")
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "Carts" ("CustomerId", "UpdatedAt")
+      VALUES (@p0, @p1)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?' (Size = 27), @p4='?' (DbType = Decimal)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CommissionSettings" ("CreatedByAdminId", "EffectiveFrom", "IsActive", "Notes", "Percentage")
+      VALUES (@p0, @p1, @p2, @p3, @p4)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CartItems" ("AddedAt", "CartId", "ProductId", "Quantity")
+      VALUES (@p0, @p1, @p2, @p3)
+      RETURNING "Id";
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "CartItems" ("AddedAt", "CartId", "ProductId", "Quantity")
+      VALUES (@p0, @p1, @p2, @p3)
+      RETURNING "Id";
+warn: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[16]
+      The WebRootPath was not found: D:\MarketNest\Backend\wwwroot. Static files may be unavailable.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:5099
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: D:\MarketNest\Backend
